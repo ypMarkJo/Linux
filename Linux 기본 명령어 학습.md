@@ -55,3 +55,55 @@
 ![image](https://user-images.githubusercontent.com/80379900/120728448-e9a8b700-c517-11eb-9bb2-0a9fed7da218.png)
 ![image](https://user-images.githubusercontent.com/80379900/120728437-e31a3f80-c517-11eb-9920-0fe804d98910.png)
   - 맨 앞의 inode가 myfile,file1에서 서로 같은 걸 가르키고 있다.
+
+
+### 8.man 명령어
+> man (명령어 이름) [명령어의 메뉴얼을 보여준다]<br>
+
+
+![image](https://user-images.githubusercontent.com/80379900/120728963-f679da80-c518-11eb-8766-e7f13744f4db.png)
+![image](https://user-images.githubusercontent.com/80379900/120728986-042f6000-c519-11eb-88e3-3f59d6126e6e.png)
+
+### 9.cat 명령어
+> cat (파일이름) [표준입력을 표준출력으로 바꿔줌.쉽게 말해 코드파일의 경우 모니터 화면에 코드를 띄워줌]<br>
+
+**리눅스에서는 명령어에서 명령어를 연결시켜줄 수 있는데 이를 파이프 라인(pipeline)이라고 한다.**
+![image](https://user-images.githubusercontent.com/80379900/120730037-8587f200-c51b-11eb-8ec7-bf3271496c9a.png)
+
+- 표준출력의 방향을 모니터가 아니라 파일로: 즉, 복사를 하겠다.<br>
+> cat source > target<br>
+
+![image](https://user-images.githubusercontent.com/80379900/120730427-6c337580-c51c-11eb-999a-130460569014.png)
+
+**+ >>이면 파일의 마지막입력에 이어서 복사시켜준다.**
+![image](https://user-images.githubusercontent.com/80379900/120730850-5bcfca80-c51d-11eb-8bc1-34c44d5d77f5.png)
+
+### 10. head/tail 명령어
+
+> head[or tail] (파일이름)<br>
+
+- 파일의 처음 10줄(default)[tail은 끝에서 10줄]을 출력하는 명령어.
+> tail -f (파일이름) 
+
+- 추가될 때마다 보여줌.(로그를 보는데 유용)
+
+### 11. grep 명령어
+
+> grep (문자열) (파일이름)<br>
+- 문자열이 들어있는 내용을 찾아주는 명령어.<br>
+![image](https://user-images.githubusercontent.com/80379900/120733155-8f145880-c521-11eb-91e9-3acc94e80b9d.png)
+![image](https://user-images.githubusercontent.com/80379900/120733186-9cc9de00-c521-11eb-9f19-aeda1adedaf8.png)
+
+> grep -H (문자열) (파일이름)<br>
+- 어떤 파일인지를 찾아줌.<br>
+![image](https://user-images.githubusercontent.com/80379900/120733554-693b8380-c522-11eb-8dc0-7e0a56db311e.png)
+![image](https://user-images.githubusercontent.com/80379900/120733664-912ae700-c522-11eb-8e9e-d1163b7fa7dc.png)
+
+### 12. less 명령어
+- 파일을 열고 내용을 볼 수 있는 텍스트뷰어 기능.
+![image](https://user-images.githubusercontent.com/80379900/120734206-7442e380-c523-11eb-83a4-85869e104b01.png)<br>
+- 그림과 같이 서버에 장애상황이 발생해 1기가의 로그를 확인해야 한다면<> 또 그걸 원격으로 본다면 메모리가 2기가나 잡혀먹는다.<br>
+만일 메모리가 위태위태한 상황이라면 장애상황의 로그를 보려다가 메모리 장애를 또 만들어낼 수도 있는 상황이다.<br>
+이럴 때는 vi가 아닌 less명령어를 이용해 로그를 확인하면 메모리에는 딱 눈에 들어오는 만큼 <br>기껏해야 1KB만 메모리를 사용하므로
+효율적이다.
+
