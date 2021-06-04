@@ -44,3 +44,16 @@
 ### 7. w/who 명령어
 - 접속한 계정정보와 IP를 조회하는 명령어<br>
 
+### 8. nslookup : 도메인이나 ip를 입력하면 그 정보를 보여줌
+
+### 9. ps 명령어
+> ps -ef [전체 프로세스 출력]<br>
+> ps -ef | grep (찾으려는 프로세스 이름)[특정 프로세스 출력]<br>
+> kill -9 (죽이려는 프로세스 아이디) [특정 프로세스 종료]<br>
+
+![image](https://user-images.githubusercontent.com/80379900/120746060-61d3a480-c539-11eb-933a-fbb49533958b.png)
+
+### 10. adduser 명령어
+> sudo adduser (새 계정이름) [새로운 계정을 추가한다.]<br>
+> su -l (이용할 계정이름) [새 계정으로 이동한다]<br>
+> sudo deluser (삭제할 계정이름) [계정을 삭제한다.]<br>
